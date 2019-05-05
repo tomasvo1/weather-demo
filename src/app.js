@@ -52,18 +52,6 @@ app.get('/weather', (req,res) => {
     })
 })
 
-app.get('/products', (req,res) => {
-    if (!req.query.search) {
-        return res.send({
-            error: 'no search term'
-        })
-    }
-    console.log(req.query.search)
-    res.send({
-        products: []
-    })
-})
-
 app.get('/about', (req,res) => {
     res.render('about', {
         title: 'this is the best about page ever made',
